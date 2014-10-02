@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2014-10-01 10:46:43
+<?php /* Smarty version 2.6.26, created on 2014-10-01 14:51:28
          compiled from widget/product/boxproduct.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'strip_tags', 'widget/product/boxproduct.tpl', 2, false),array('block', 'oxhasrights', 'widget/product/boxproduct.tpl', 15, false),array('function', 'oxmultilang', 'widget/product/boxproduct.tpl', 18, false),array('function', 'oxprice', 'widget/product/boxproduct.tpl', 31, false),array('function', 'oxscript', 'widget/product/boxproduct.tpl', 42, false),)), $this); ?>

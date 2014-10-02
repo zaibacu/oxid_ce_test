@@ -23,3 +23,6 @@
 /**
  * Add custom functions here.
  */
+
+//include nfq autoloader
+require_once(dirname(__FILE__) . '/Nfq/Autoloader.php');

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2014-10-01 10:46:43
+<?php /* Smarty version 2.6.26, created on 2014-10-01 14:51:28
          compiled from widget/sidebar/partners.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'oxmultilang', 'widget/sidebar/partners.tpl', 2, false),)), $this); ?>

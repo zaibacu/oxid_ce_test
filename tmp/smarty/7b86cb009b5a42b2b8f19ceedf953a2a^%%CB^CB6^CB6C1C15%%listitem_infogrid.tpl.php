@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2014-10-01 10:46:42
+<?php /* Smarty version 2.6.26, created on 2014-10-01 14:51:28
          compiled from widget/product/listitem_infogrid.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'oxhasrights', 'widget/product/listitem_infogrid.tpl', 30, false),array('function', 'oxmultilang', 'widget/product/listitem_infogrid.tpl', 56, false),array('function', 'oxid_include_dynamic', 'widget/product/listitem_infogrid.tpl', 94, false),array('function', 'oxprice', 'widget/product/listitem_infogrid.tpl', 100, false),array('function', 'oxscript', 'widget/product/listitem_infogrid.tpl', 158, false),)), $this); ?>
