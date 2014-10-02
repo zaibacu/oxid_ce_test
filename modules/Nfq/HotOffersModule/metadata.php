@@ -22,7 +22,7 @@ $aModule = array(
         "oxarticlelist" => "Nfq_HotOffersModule_Models_HotOfferOxarticlelist"
     ),
     "templates" => array(
-        "nfq_hot_offer_handling.tpl" => "Nfq/HotOffersModule/Views/Admin/tpl/nfq_hot_offer_handling.tpl"
+        "nfq_hot_offer_handling.tpl" => "Nfq/HotOffersModule/views/admin/tpl/nfq_hot_offer_handling.tpl"
     ),
     "events" => array(
         "onActivate" => "Installer::onActivate",
