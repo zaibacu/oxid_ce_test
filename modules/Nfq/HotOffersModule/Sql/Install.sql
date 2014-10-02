@@ -1,0 +1,1 @@
+ALTER TABLE `oxarticles` ADD COLUMN `nfq_is_hotoffer` TINYINT(1) NOT NULL DEFAULT '0'

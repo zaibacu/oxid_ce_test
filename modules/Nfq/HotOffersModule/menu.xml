@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<OX>
+    <OXMENU id="NAVIGATION_ESHOPADMIN">
+        <MAINMENU id="mxmanageprod">
+        	<SUBMENU id="mxhotoffers" cl="Nfq_HotOffersModule_Controllers_Admin_HotOfferHandling">
+            </SUBMENU>
+        </MAINMENU>
+    </OXMENU>
+</OX>
