@@ -1,5 +1,22 @@
 [{include file="headitem.tpl" title="GENERAL_ADMIN_TITLE"|oxmultilangassign}]
 <script type="text/javascript">
+	function ajaxRequest(url, params, callback){
+		var xmlhttp = new XMLHttpRequest();
+
+		if(callback !== undefined){
+			xmlhttp.onreadystatechange=function()
+			{
+				if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				{
+					callback(xmlhttp.responseText);
+				}
+			}
+		}
+		
+		xmlhttp.open("GET", url,true);
+		xmlhttp.send();
+	}
+
 	function handleOffer($this){
 		var url = window.location.href;
 		if($this.checked)
@@ -8,7 +25,7 @@
 			url = url + "&fnc=unsetHot";
 
 		url = url + "&oxid=" + $this.getAttribute("data-oxid");
-		window.location.href = url;
+		ajaxRequest(url);
 	}
 </script>
 <style>

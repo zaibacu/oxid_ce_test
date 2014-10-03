@@ -8,7 +8,11 @@
 		}
 
 		public function setHotOffer($val){
-			$this->oxarticles__nfq_is_hotoffer = $val;
+			$this->assign(array(
+					"nfq_is_hotoffer" => $val
+				)
+			);
+			parent::save();
 		}
 	}
 ?>
