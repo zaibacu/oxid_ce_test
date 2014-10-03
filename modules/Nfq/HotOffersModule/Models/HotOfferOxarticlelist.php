@@ -11,7 +11,7 @@ class Nfq_HotOffersModule_Models_HotOfferOxarticlelist extends Nfq_HotOffersModu
 		$this->selectString($sSelect);
 	}
 
-	public function loadArticles($limit = 0){
+	public function loadArticles($limit = 0, $filter = ""){
 		$this->_aArray = array();
 		$sArticleTable = getViewName("oxarticles");
 		$sSelect = "SELECT * FROM ". $sArticleTable ." WHERE oxactive = 1 AND oxissearch = 1" 

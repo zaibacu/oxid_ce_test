@@ -27,6 +27,22 @@
 		url = url + "&oxid=" + $this.getAttribute("data-oxid");
 		ajaxRequest(url);
 	}
+
+	function filter($this){
+		var value = $this.value;
+		var pattern = new RegExp(value, "i");
+		var elements = document.querySelectorAll("div.offer_name");
+		for(var i = 1; i < elements.length; i++){
+			var element = elements[i];
+			var text = element.innerHTML;
+			if(!pattern.test(text)){
+				element.parentNode.style.display = "none";
+			}
+			else{
+				element.parentNode.style.display  = "block";
+			}
+		}
+	}
 </script>
 <style>
 	.offers{
@@ -54,7 +70,10 @@
 		width: 10px;
 	}
 </style>
-
+<div>
+<label for="offer_filter">Filter:</label>
+<input type="text" name="offer_filter" onkeyup="filter(this)"/>
+</div>
 <div class="offers">
 	<div class="offers_head offer_row">
 		<div class="offer_name">Product title</div>
