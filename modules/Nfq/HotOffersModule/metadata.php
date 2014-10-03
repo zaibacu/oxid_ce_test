@@ -41,6 +41,11 @@ $aModule = array(
             "template" => "page/details/inc/productmain.tpl",
             "block" => "details_productmain_zoom",
             "file" => "views/azure/tpl/page/details/inc/blocks/productmain.tpl"
+        ),
+        array(
+            "template" => "article_main.tpl",
+            "block" => "admin_article_main_form",
+            "file" => "views/admin/tpl/blocks/article_main.tpl"
         )
     )
 );
