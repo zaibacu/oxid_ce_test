@@ -3,7 +3,7 @@
 /**
  * Metadata version
  */
-$sMetadataVersion = "1.0";
+$sMetadataVersion = "1.2";
 
 /**
  * Module information
@@ -13,7 +13,7 @@ $aModule = array(
     "title" => "HotOffersModule",
     "description" => "",
     "thumbnail" => "hot_offer.png",
-    "version" => "1.0.0",
+    "version" => "1.0.1",
     "author" => "NFQ",
     "url" => "http://www.nfq.lt",
     "email" => "info@nfq.lt",

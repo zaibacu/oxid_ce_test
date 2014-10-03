@@ -3,6 +3,10 @@ class Nfq_HotOffersModule_Controllers_Admin_HotOfferHandling extends oxAdminDeta
 {	
 	protected $_sThisTemplate = "nfq_hot_offer_handling.tpl";
 
+	/**
+	 * Renders HotOffers list to admin view
+	 * @return string module template
+	 */
 	public function render(){
 		parent::render();
 		$oOfferList = oxNew("Nfq_HotOffersModule_Models_HotOfferOxarticlelist");
@@ -11,10 +15,10 @@ class Nfq_HotOffersModule_Controllers_Admin_HotOfferHandling extends oxAdminDeta
 		return $this->_sThisTemplate;
 	}
 
-	public function save(){
-		parent::save();
-	}
-
+	/**
+	 * Set 'hot offer' attribute for current article
+	 * @return this class name
+	 */
 	public function setHot(){
 		//$oxid = $this->_getOxid();
 		//oxDb::getDb()->Execute("UPDATE `oxarticles` SET nfq_is_hotoffer = 1 WHERE oxid = '". $oxid ."'");
@@ -23,6 +27,10 @@ class Nfq_HotOffersModule_Controllers_Admin_HotOfferHandling extends oxAdminDeta
 		return get_class($this);
 	}
 
+	/**
+	 * Remove 'hot offer' attribute for current article
+	 * @return this class name
+	 */
 	public function unsetHot(){
 		//$oxid = $this->_getOxid();
 		//oxDb::getDb()->Execute("UPDATE `oxarticles` SET nfq_is_hotoffer = 0 WHERE oxid = '". $oxid ."'");
@@ -31,10 +39,18 @@ class Nfq_HotOffersModule_Controllers_Admin_HotOfferHandling extends oxAdminDeta
 		return get_class($this);
 	}
 
+	/**
+	 * Parses oxid from url
+	 * @return int oxid
+	 */
 	private function _getOxid(){
 		return oxRegistry::getConfig()->getRequestParameter("oxid");
 	}
 
+	/**
+	 * Creates article object from url
+	 * @return HotOffersModule article object
+	 */
 	private function _getArticle(){
 		$oxid = $this->_getOxid();
 		$oArticle = oxNew("Nfq_HotOffersModule_Models_HotOfferOxarticle");

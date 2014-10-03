@@ -3,6 +3,10 @@ class Nfq_HotOffersModule_Models_HotOfferOxarticlelist extends Nfq_HotOffersModu
 {
 	protected $_sObjectsInListName = "Nfq_HotOffersModule_Models_HotOfferOxarticle";
 
+	/**
+	 * Loads articles with attribute 'hot offer'
+	 * @return array of articles
+	 */
 	public function loadHotOffers($limit = 0){
 		$this->_aArray = array();
 		$sArticleTable = getViewName("oxarticles");
@@ -11,6 +15,11 @@ class Nfq_HotOffersModule_Models_HotOfferOxarticlelist extends Nfq_HotOffersModu
 		$this->selectString($sSelect);
 	}
 
+
+	/**
+	 * Loads articles
+	 * @return array of articles
+	 */
 	public function loadArticles($limit = 0, $filter = ""){
 		$this->_aArray = array();
 		$sArticleTable = getViewName("oxarticles");
@@ -19,6 +28,10 @@ class Nfq_HotOffersModule_Models_HotOfferOxarticlelist extends Nfq_HotOffersModu
 		$this->selectString($sSelect);
 	}
 
+	/**
+	 * Forms limitting query
+	 * @return string
+	 */
 	private function _getLimitQuery($limit){
 		if($limit == 0 || $limit == null)
 			return "";

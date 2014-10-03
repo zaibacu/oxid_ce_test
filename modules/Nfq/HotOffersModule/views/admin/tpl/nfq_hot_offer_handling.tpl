@@ -39,7 +39,7 @@
 				element.parentNode.style.display = "none";
 			}
 			else{
-				element.parentNode.style.display  = "block";
+				element.parentNode.style.display  = "table-row";
 			}
 		}
 	}
