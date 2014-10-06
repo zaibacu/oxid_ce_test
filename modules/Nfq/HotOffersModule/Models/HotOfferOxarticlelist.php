@@ -7,11 +7,11 @@ class Nfq_HotOffersModule_Models_HotOfferOxarticlelist extends Nfq_HotOffersModu
 	 * Loads articles with attribute 'hot offer'
 	 * @return array of articles
 	 */
-	public function loadHotOffers($limit = 0){
+	public function loadHotOffers($start = 0, $limit = 0){
+		$this->setSqlLimit($start, $limit);
 		$this->_aArray = array();
 		$sArticleTable = getViewName("oxarticles");
-		$sSelect = "SELECT * FROM ". $sArticleTable ." WHERE oxactive = 1 AND oxissearch = 1 AND nfq_is_hotoffer = 1" 
-		. $this->_getLimitQuery($limit);
+		$sSelect = "SELECT * FROM ". $sArticleTable ." WHERE oxactive = 1 AND oxissearch = 1 AND nfq_is_hotoffer = 1";
 		$this->selectString($sSelect);
 	}
 
@@ -20,23 +20,24 @@ class Nfq_HotOffersModule_Models_HotOfferOxarticlelist extends Nfq_HotOffersModu
 	 * Loads articles
 	 * @return array of articles
 	 */
-	public function loadArticles($limit = 0, $filter = ""){
+	public function loadArticles($start = 0, $limit = 0){
+		$this->setSqlLimit($start, $limit);
 		$this->_aArray = array();
 		$sArticleTable = getViewName("oxarticles");
-		$sSelect = "SELECT * FROM ". $sArticleTable ." WHERE oxactive = 1 AND oxissearch = 1" 
-		. $this->_getLimitQuery($limit);
+		$sSelect = "SELECT * FROM ". $sArticleTable ." WHERE oxactive = 1 AND oxissearch = 1";
 		$this->selectString($sSelect);
 	}
 
-	/**
-	 * Forms limitting query
-	 * @return string
-	 */
-	private function _getLimitQuery($limit){
-		if($limit == 0 || $limit == null)
-			return "";
-		else
-			return " LIMIT " . $limit;
+	public function getCount(){
+		$myConfig = $this->getConfig();
+		$oDb = oxDb::getDb();
+		$sArticleTable = getViewName("oxarticles");
+        $oBaseObject = $this->getBaseObject();
+
+        $sSelect = "SELECT COUNT(oxid) FROM " . $sArticleTable . " WHERE oxactive = 1 AND oxissearch = 1 AND nfq_is_hotoffer = 1";
+        $iRecCnt = (int) $oDb->getOne($sSelect);
+		return $iRecCnt;
 	}
+
 }
 ?>

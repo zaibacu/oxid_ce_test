@@ -1,3 +1,7 @@
+[{oxscript add="$('a.js-external').attr('target', '_blank');"}]
+[{oxscript include="js/widgets/oxarticlebox.js" priority=10 }]
+[{oxscript add="$( '#content' ).oxArticleBox();"}]
+
 [{capture append="oxidBlock_content"}]
 [{if $oView->getHotOffers()|@count > 0}]
 <h1 class="pageHead">[{ oxmultilang ident="PAGE_SHOP_HOTOFFERS"}]</h1>
